@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "source": "equran.id API v2 (cdn.equran.id)",
+    "source_url": "https://equran.id/api/v2/surat/1",
+    "note": "Audio per ayat dan per surat di-stream dari cdn.equran.id sesuai 6 qari resmi API equran.id v2. Dapat diunduh ke penyimpanan browser untuk putar offline."
+  },
+  "reciters": [
+    { "id": "05", "name": "Misyari Rasyid Al-Afasi", "name_id": "Misyari Rasyid Al-Afasy", "style": "Murattal, Hafs 'an 'Asim" },
+    { "id": "03", "name": "Abdurrahman As-Sudais", "name_id": "Abdurrahman As-Sudais", "style": "Murattal, Hafs 'an 'Asim" },
+    { "id": "06", "name": "Yasser Al-Dosari", "name_id": "Yasir Ad-Dosari", "style": "Murattal, Hafs 'an 'Asim" },
+    { "id": "01", "name": "Abdullah Al-Juhany", "name_id": "Abdullah Al-Juhany", "style": "Murattal, Hafs 'an 'Asim" },
+    { "id": "02", "name": "Abdul Muhsin Al-Qasim", "name_id": "Abdul Muhsin Al-Qasim", "style": "Murattal, Hafs 'an 'Asim" },
+    { "id": "04", "name": "Ibrahim Al-Dossari", "name_id": "Ibrahim Al-Dossari", "style": "Murattal, Hafs 'an 'Asim" }
+  ]
+}

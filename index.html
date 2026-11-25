@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f1e8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Murottal">
+  <meta name="description" content="Murottal — Al-Qur'an 114 surat, terjemah Kemenag, waktu shalat, kiblat, pengingat, dan azan.">
+  <title>Murottal</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div id="app">
+    <main id="views">
+      <section class="view active" id="view-home" aria-label="Beranda"></section>
+      <section class="view" id="view-murotal" aria-label="Murottal"></section>
+      <section class="view" id="view-doa" aria-label="Doa"></section>
+      <section class="view" id="view-qibla" aria-label="Kiblat"></section>
+      <section class="view" id="view-azan" aria-label="Suara Azan"></section>
+      <section class="view" id="view-alarm" aria-label="Pengingat & Azan"></section>
+      <section class="view" id="view-premium" aria-label="Premium"></section>
+      <section class="view" id="view-settings" aria-label="Pengaturan"></section>
+      <section class="view" id="view-lainnya" aria-label="Lainnya"></section>
+    </main>
+    <div id="murotal-player" class="player-dock" aria-live="polite"></div>
+    <nav class="tabbar" aria-label="Navigasi utama">
+      <button type="button" class="tab active" data-view="home">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 11.5 12 4l8 7.5V20a1 1 0 0 1-1 1h-5v-6H10v6H5a1 1 0 0 1-1-1Z"/></svg>
+        Beranda
+      </button>
+      <button type="button" class="tab" data-view="murotal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 0-3 3V4Z"/><path d="M8 8h8M8 12h8"/></svg>
+        Murottal
+      </button>
+      <button type="button" class="tab" data-view="qibla">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="12" cy="12" r="9"/><path d="m12 4 2 8-2 2-2-2 2-8Z"/></svg>
+        Kiblat
+      </button>
+      <button type="button" class="tab" data-view="lainnya">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><circle cx="6" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18" cy="12" r="1.6"/></svg>
+        Lainnya
+      </button>
+    </nav>
+  </div>
+  <div id="toast" role="status"></div>
+  <div id="alarm-banner" role="alert"></div>
+  <script src="js/vendor/adhan.umd.min.js"></script>
+  <script type="module" src="js/app.js"></script>
+  <script>
+    document.querySelectorAll('.tab').forEach(function (t) {
+      t.addEventListener('click', function () {
+        location.hash = '#/' + t.getAttribute('data-view');
+      });
+    });
+  </script>
+</body>
+</html>
